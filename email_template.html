@@ -1,0 +1,47 @@
+<!-- email_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; color: #333; }
+    .btn {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <p>Hi {{Name}},</p>
+
+  <p>I came across <strong>{{Company}}</strong> while researching top SaaS and Fintech companies in {{Location}}. As a {{Title}}, I thought you might be interested in how we help companies like yours:</p>
+
+  <ul>
+    <li>Automate workflows</li>
+    <li>Enhance team productivity</li>
+    <li>Improve client engagement using AI</li>
+  </ul>
+
+  <p>Would you be open to a quick 15-minute call this week?</p>
+  <!-- <img src="http://localhost:5000/track/open?email={{ Email }}" width="1" height="1" alt="." style="display:none;" /> -->
+  <!-- <img src="http://192.168.1.4:5000/track/open?email={{ Email }}" width="1" height="1" alt="." style="display:none;" /> -->
+  <!-- <img src="http://192.168.1.4:5000/track/open?email={{ Email }}&uid={{ UID }}" width="1" height="1" style="display:none;" /> -->
+  <img src="https://email-tracker-vhrr.onrender.com/track/open?email={{ Email }}&uid={{ UID }}" width="1" height="1" style="display:none;" />
+
+
+
+  <!-- <p><a href="https://calendly.com/your-link" class="btn">Schedule a Call</a></p> -->
+  <!-- <a href="http://192.168.1.4:5000/track/click?email={{ Email }}" class="btn">Schedule a Call</a> -->
+  <a href="https://email-tracker-vhrr.onrender.com/track/click?email={{ Email }}" class="btn">Schedule a Call</a>
+
+
+
+  <p>Best regards,<br>
+    {{ SenderName }}<br>
+    {{ SenderCompany }}<br>
+    <a href="mailto:{{ SenderEmail }}">{{ SenderEmail }}</a></p>
+    
+</body>
+</html>
